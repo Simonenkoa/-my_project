@@ -11,3 +11,24 @@ words = ["python", "Java", "c++", "Rust", "go"]
 long_words = [w.upper() for w in words if len(w) > 3]
 print("3. Слова длиной >3:", long_words)
 
+# Задание 4: Класс-генератор Countdown
+class Countdown:
+    def __init__(self, n):
+        self.n = n
+
+    def __iter__(self):
+        self.current = self.n
+        return self
+
+    def __next__(self):
+        if self.current <= 0:
+            raise StopIteration
+        result = self.current
+        self.current -= 1
+        return result
+
+print("4. Countdown от 5:")
+for x in Countdown(5):
+    print(x)
+
+ 
