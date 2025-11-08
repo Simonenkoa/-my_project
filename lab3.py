@@ -68,3 +68,18 @@ profit = S - P   # Прибыль
 
 print(f"Итоговая сумма: {S:.2f}")
 print(f"Общая прибыль: {profit:.2f}")
+
+
+# Задание 7: Fraction
+from fractions import Fraction
+
+a = Fraction(3, 4)
+b = Fraction(5, 6)
+
+print("7. Операции с дробями:")
+print(f"   Сложение: {a + b}")
+print(f"   Вычитание: {a - b}")
+print(f"   Умножение: {a * b}")
+print(f"   Деление: {a / b}")
+
+
