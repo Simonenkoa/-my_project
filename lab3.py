@@ -107,3 +107,13 @@ print(f"Дней с рождения: {lived}")
 print(f"Дней до ДР: {to_next}")
 
 
+# Задание 10:
+def format_date(dt):
+    months = ["января", "февраля", "марта", "апреля", "мая", "июня",
+              "июля", "августа", "сентября", "октября", "ноября", "декабря"]
+    return f"Сегодня {dt.day} {months[dt.month-1]} {dt.year} года, время: {dt:%H:%M}"
+
+now = datetime.now()
+print("10. Форматирование строки:")
+print(f"   {format_date(now)}")
+
