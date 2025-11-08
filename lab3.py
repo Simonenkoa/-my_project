@@ -53,4 +53,18 @@ class Fibonacci :
 print("5. Fibonacci(5):")
 for num in Fibonacci(5) :
     print(num, end=' ')
+print()
 
+
+# Задание 6: Decimal
+from decimal import Decimal
+
+P = Decimal(input("P: "))
+r = Decimal(input("r (%): "))
+t = int(input("t (лет): "))
+
+S = P * (1 + r / (12 * 100)) ** (12 * t)
+profit = S - P   # Прибыль
+
+print(f"Итоговая сумма: {S:.2f}")
+print(f"Общая прибыль: {profit:.2f}")
