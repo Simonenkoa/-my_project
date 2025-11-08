@@ -91,3 +91,19 @@ print("8. Текущая дата и время:")
 print(f"   Полное: {now}")
 print(f"   Дата: {now.date()}")
 print(f"   Время: {now.time()}")
+
+
+# Задание 9: DateTime
+from datetime import datetime
+birth = datetime.strptime(input("ДР (ДД.ММ.ГГГГ): "), "%d.%m.%Y").date()
+today = datetime.now().date()
+lived = (today - birth).days
+next_birthday = birth.replace(year=today.year)
+if next_birthday <= today:
+    next_birthday = next_birthday.replace(year=today.year + 1)
+to_next = (next_birthday - today).days
+
+print(f"Дней с рождения: {lived}")
+print(f"Дней до ДР: {to_next}")
+
+
