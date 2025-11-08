@@ -31,4 +31,26 @@ print("4. Countdown от 5:")
 for x in Countdown(5):
     print(x)
 
- 
+# Задание 5: Класс-генератор Fibonacci
+class Fibonacci :
+    def __init__(self, n) :
+        self.n = n
+        self.a, self.b = 0, 1
+        self.count = 0
+
+    def __iter__(self) :
+        return self
+
+    def __next__(self) :
+        if self.count >= self.n :
+            raise StopIteration
+        result = self.a
+        self.a, self.b = self.b, self.a + self.b
+        self.count += 1
+        return result
+
+
+print("5. Fibonacci(5):")
+for num in Fibonacci(5) :
+    print(num, end=' ')
+
