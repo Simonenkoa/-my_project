@@ -83,3 +83,11 @@ print(f"   Умножение: {a * b}")
 print(f"   Деление: {a / b}")
 
 
+# Задание 8: DateTime (текущая дата и время)
+from datetime import datetime
+
+now = datetime.now()
+print("8. Текущая дата и время:")
+print(f"   Полное: {now}")
+print(f"   Дата: {now.date()}")
+print(f"   Время: {now.time()}")
